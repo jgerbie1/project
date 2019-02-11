@@ -3,6 +3,8 @@
 # Part I
 def hello(name)
   # YOUR CODE HERE
+  a = "Hello, "
+  return a.concat(name);
 end
 
 # Part II
