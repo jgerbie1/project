@@ -16,11 +16,10 @@ end
 # Part II
 def array2d_2_hash contact_info, contacts
     # YOUR CODE HERE
-    if contacts_info.empty?
+     feilds = [:email, :phone]
+    if contact_info.empty?
         return contacts;
     end 
-    l = 0;
-    feilds = [:email, :phone ]
     contacts.each do |key,v|
         feilds.each do |feilds|
             key[feilds] = contact_info[v].shift 
