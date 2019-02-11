@@ -13,10 +13,16 @@ def starts_with_consonant? s
  a = s.chr
  a.downcase
  b = a[/(?<vowel>[aeiou])(?<non_vowel>[^aeiou])/, "non_vowel"]
-  return a === b
+  return a == b
 end
 
 # Part III
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  a = s.bytesize 
+  if (a%4 == 0)
+    return true;
+  else 
+    return false;
+  end 
 end
