@@ -10,6 +10,10 @@ end
 # Part II
 def starts_with_consonant? s
   # YOUR CODE HERE
+ a = s.chr
+ a.downcase
+ b = a[/(?<vowel>[aeiou])(?<non_vowel>[^aeiou])/, "non_vowel"]
+  return a === b
 end
 
 # Part III
