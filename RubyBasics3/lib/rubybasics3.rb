@@ -15,4 +15,8 @@ class BookInStock
         raise ArgumentError.new
     end
 end 
+    def price_as_string 
+        format = "$%.2f" % @price
+        return format 
+    end 
 end
