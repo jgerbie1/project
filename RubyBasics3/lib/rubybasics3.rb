@@ -4,9 +4,15 @@ class BookInStock
 # YOUR CODE HERE
  attr_accessor :isbn, :price  
  
- def initialize (isbn = " ", price = 0)
+ def initialize (isbn, price)
      @isbn = isbn
      @price = price
- end 
-
+ 
+    if (isbn == "")
+      raise ArgumentError.new
+   
+  elsif (price <= 0)
+        raise ArgumentError.new
+    end
+end 
 end
