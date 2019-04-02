@@ -1,8 +1,8 @@
 class ArticlesController < ApplicationController
-     def index 
+    def index 
         @articles = Article.all
     end 
-     def new 
+    def new 
          @article = Article.new
     end 
     
@@ -12,35 +12,38 @@ class ArticlesController < ApplicationController
         if @article.save
           #  byebug 
         redirect_to @article
-    else 
+        else 
         render 'new'
-    end 
+        end
     end
+    
     def show 
         @article = Article.find(params[:id])
     end 
+    
     def edit 
      @article = Article.find(params[:id])
- end 
- def update
+    end 
+    
+    def update
      @article = Article.find(params[:id])
      if @article.update(article_params)
          redirect_to @article 
      else 
          render 'edit'
      end 
-     end 
-     def destroy 
+    end
+    
+    def destroy 
          @article = Article.find(params[:id])
          @article.destroy 
          
          redirect_to articles_path
-     end 
-end
+    end 
 
 private 
     def article_params
         params.require(:article).permit(:title, :text)
     end 
    
- 
+end
