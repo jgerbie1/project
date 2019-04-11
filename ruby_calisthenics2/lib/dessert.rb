@@ -20,4 +20,11 @@ class JellyBean < Dessert
     @calories = 5
     @flavor = flavor
   end
+  def delicious?
+     if @flavor == "licorice"
+      false
+    else
+      true
+    end
+  end 
 end
