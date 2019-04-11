@@ -4,14 +4,13 @@ class Dessert
   def initialize(name, calories)
         @name = name
         @calories = calories
-
   end
   def healthy?
-    # your code here
+   @calories < 200
   end
   def delicious?
-    # your code here
-  end
+  true
+end
 end
 
 class JellyBean < Dessert
