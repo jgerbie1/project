@@ -1,2 +1,54 @@
-<h1>HomePage#index</h1>
-<p>Find me in app/views/home_page/index.html.erb</p>
+ <head>
+        <title>Recipe Finder App</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles.css">
+        <style type="text/css">
+            .container{
+                text-align: center;
+            }
+            .column{
+              float: left;
+              width: 30%;
+              padding: 10px;
+              height: 300px; /* Should be removed. Only for demonstration */
+            }
+            .recipe-title{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="topnav">
+            <input type="text" placeholder="Search..">
+            <button>Apply</button>
+        </div> 
+        <h1 id="heading">Recipe Finder</h1>
+        <div class=container>
+            <div class=column>
+                <h3>Recommended Results</h3>
+                <ul>
+                    <li><a href="someRecipe.html">RecommendedRecipe 1</a></li>
+                    <li><a href="someRecipe.html">Recommended Recipe 2</a></li>
+                    <li><a href="someRecipe.html">Recommended Recipe 3</a></li>
+                    <li><a href="someRecipe.html">Recommended etc.</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Search Results:</h3>
+                <ul>
+                    <li><a href="someRecipe.html">Recipe 1</a></li>
+                    <li><a href="someRecipe.html">Recipe 2</a></li>
+                    <li><a href="someRecipe.html">Recipe 3</a></li>
+                    <li><a href="someRecipe.html">etc.</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Create your own</h3>
+                <input type="text" placeholder="title" class="recipe-title">
+                <input type ="text" placeholder="Description of Recicpe" class="description">
+                <button class="align-auto">Create</button>
+            </div>
+            
+    </body>
+</html>
