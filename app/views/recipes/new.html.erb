@@ -1,44 +1,34 @@
 <div>
 <h1 align="center">Recipe Finder</h1>
-</div>
 
-<div>
-<h2>Description</h2>
+    <%= form_for :recipe, url: recipes_path do |f| %>
+
+<h2><%= f.label :Description %></h2>
    <p>
-     <textarea data-max-words="200"> </textarea>
+     <%= f.text_field :description %> 
   </p>
   </div>
   
   <div> 
-<h2>Instruction</h2>
+<h2><%= f.label :Instruction %></h2>
   <p>
-    <textarea> </textarea>
+    <%= f.text_field :instruction %>
     </p>
    </div>
     
     <div> 
-<h2>Ingredients </h2>
+<h2> <%= f.label :Ingredients %></h2>
     <p>
-    <textarea> </textarea>
+    <%= f.text_field :ingredients %>
   </p>
   </div>
   
   
-<div class="Filter"> 
-<h3>Filters</h3>
+
+<h3><%= f.label :Filters %></h3>
+    <%= f.check_box :Filters, {:class => "anyclass", :style => "anystyle"}, "monday" %>
+  
     <p>
-        
-        <form> 
-            <fieldset>
-                 <legend>Filter Options</legend>
-                <input type="checkbox"> Vegetarian <br>
-                <input type="checkbox"> Vegan <br>
-                <input type="checkbox"> Gluten free <br>
-                <input type="checkbox"> Breakfast <br>
-                <input type="checkbox"> Lunch <br>
-                <input type="checkbox"> Dinner <br>
-                <input type="checkbox"> Snacks <br>
-            </fieldset>
-        </form>
-        <button type="button"> Apply</button>
+        <%= f.submit %>
     </p>
+    <% end %>
