@@ -3,6 +3,11 @@
 
     <%= form_for :recipe, url: recipes_path do |f| %>
 
+<h2><strong><%=f.label :title %></strong></h2>
+<p>
+    <%=f.text_field :title %>
+</p>
+
 <h2><%= f.label :Description %></h2>
    <p>
      <%= f.text_field :description %> 
