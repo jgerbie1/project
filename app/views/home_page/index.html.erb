@@ -1,5 +1,8 @@
 <div class="header_container">
     <h1 id=heading>Recipe Finder</h1>
+    <p>
+        <%= link_to 'Create Recipe', new_recipe_path %>
+    </p>
 </div>
 <div class="body_container">
     <table>
@@ -12,7 +15,7 @@
         <tr>
             <td><%= recipe.title %></td>
             <td><%= recipe.description %></td>
-            <td><%= link_to 'Show', recipe_path(recipe) %></td>
+            <td><%= link_to 'Show', recipe_path(recipe) %></td> <br>
         </tr>
     </table>
     <% end %>
