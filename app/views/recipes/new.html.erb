@@ -3,7 +3,7 @@
 
     <%= form_for :recipe, url: recipes_path do |f| %>
 
-<h2><strong><%=f.label :title %></strong></h2>
+<h2><strong><%=f.label :Title %></strong></h2>
 <p>
     <%=f.text_field :title %>
 </p>
@@ -20,19 +20,13 @@
     <%= f.text_field :instruction %>
     </p>
    </div>
-    
+   
     <div> 
 <h2> <%= f.label :Ingredients %></h2>
     <p>
     <%= f.text_field :ingredients %>
   </p>
   </div>
-  
-  
-
-<h3><%= f.label :Filters %></h3>
-    <%= f.check_box :Filters, {:class => "anyclass", :style => "anystyle"}, "monday" %>
-  
     <p>
         <%= f.submit %>
     </p>
