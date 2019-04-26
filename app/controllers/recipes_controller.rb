@@ -14,14 +14,12 @@ class RecipesController < ApplicationController
     
     def create 
         @recipe = Recipe.new(recipe_params)
-<<<<<<< HEAD
         if 
         @recipe.save
         redirect_to @recipe
     else
         render 'new'
     end 
-=======
         
         if   @recipe.save
             redirect_to @recipe
@@ -41,7 +39,6 @@ class RecipesController < ApplicationController
         else
             render 'edit'
         end
->>>>>>> faf94d74ff0051039f3ca2546866699354248d38
     end
 
     private

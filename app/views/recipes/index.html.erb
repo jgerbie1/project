@@ -15,7 +15,7 @@
         <tr>
             <td><%= recipe.title %></td>
             <td><%= recipe.description %></td>
-            <td><%= link_to 'Show', controller: 'recipe' %></td> <br>
+            <td><%= link_to 'Show', recipe_path(recipe) %></td> <br>
             <td><%= link_to 'Edit',  edit_recipe_path(recipe) %></td>
         </tr>
     </table>
