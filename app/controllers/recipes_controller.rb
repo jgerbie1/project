@@ -8,24 +8,17 @@ class RecipesController < ApplicationController
         @recipe = Recipe.new
     end
     
-    def show
-        @recipe = Recipe.find(params[:id])
-    end
-    
     def create 
         @recipe = Recipe.new(recipe_params)
-        if 
-        @recipe.save
+        if  @recipe.save
         redirect_to @recipe
-    else
+        else
         render 'new'
+        end 
     end 
         
-        if   @recipe.save
-            redirect_to @recipe
-        else 
-            render 'new'
-        end
+    def show
+        @recipe = Recipe.find(params[:id])
     end
     
     def edit
@@ -40,9 +33,14 @@ class RecipesController < ApplicationController
             render 'edit'
         end
     end
+    def destroy
+        @recipe = Recipe.find(params[:id])
+        @recipe.destroy
+        redirect_to recipes_path
+    end
 
     private
         def recipe_params
-            params.require(:recipe).permit(:title, :instruction, :ingredients, :description)
+            params.require(:recipe).permit(:title, :description, :ingredients, :instruction)
         end
 end
