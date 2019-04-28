@@ -11,3 +11,8 @@
     <h2>Instructions:</h2>
     <p><%= @recipe.instruction %></p>
 </div> 
+<h2>Comments</h2>
+ <%= render @recipe.comments %>
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+<%= link_to 'Back', recipes_path %> 

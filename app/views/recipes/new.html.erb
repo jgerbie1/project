@@ -1,34 +1,5 @@
 <div>
 <h1 align="center">Recipe Finder</h1>
 
-    <%= form_for :recipes, url: recipes_path do |f| %>
-
-<h2><strong><%=f.label :Title %></strong></h2>
-<p>
-    <%=f.text_field :title %>
-</p>
-
-<h2><%= f.label :Description %></h2>
-   <p>
-     <%= f.text_field :description %> 
-  </p>
-  </div>
-  
-  <div> 
-<h2><%= f.label :Instruction %></h2>
-  <p>
-    <%= f.text_field :instruction %>
-    </p>
-   </div>
-   
-    <div> 
-<h2> <%= f.label :Ingredients %></h2>
-    <p>
-    <%= f.text_field :ingredients %>
-  </p>
-  </div>
-    <p>
-        <%= f.submit %>
-    </p>
-    <% end %>
+ <%= render 'form' %>
     <%= link_to 'Back', recipes_path %>
