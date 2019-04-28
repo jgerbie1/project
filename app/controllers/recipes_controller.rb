@@ -4,23 +4,18 @@ class RecipesController < ApplicationController
         @recipes = Recipe.all
     end
     def new
+        @recipe = Recipe.new
     end
     def show
         @recipe = Recipe.find(params[:id])
     end
     def create 
-        @recipe = Recipe.new(recipes_params)
-        @recipe.save
+        @recipe = Recipe.new(recipe_params)
+        if @recipe.save
         redirect_to @recipe
-    end
-
-    private
-<<<<<<<<< saved version
-        end 
-    end 
-        
-    def show
-        @recipe = Recipe.find(params[:id])
+        else
+        render 'new'
+        end
     end
     
     def edit
@@ -44,10 +39,5 @@ class RecipesController < ApplicationController
     private
         def recipe_params
             params.require(:recipe).permit(:title, :description, :ingredients, :instruction)
-=========
-    private
-        def recipes_params
-            params.require(:recipe).permit(:title, :instruction, :ingredients, :description)
->>>>>>>>> local version
         end
 end

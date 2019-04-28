@@ -21,9 +21,10 @@
                 <td><%= recipe.title %></td>
                 <td><%= recipe.description %></td>
                 <td><%= link_to 'Show', recipe_path(recipe) %></td> <br>
-            </tr>
-        </table>
-        <% end %>
-    </div>
-
-</body>
+                 <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+     <td><%= link_to 'Destroy', recipe_path(recipe), method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+</table>
+  <% end %>
+  </div>
