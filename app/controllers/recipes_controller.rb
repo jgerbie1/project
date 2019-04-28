@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
         if  @recipe.save
         redirect_to @recipe
         else
-        render 'new'
+        render ' new '
         end 
     end 
         
