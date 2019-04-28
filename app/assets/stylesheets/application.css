@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+body{
+ background-image: url("http://shop.raybrandthyundai.com/wp-content/uploads/sites/5/2017/03/iStock-517488868-e1490795015639.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+
+}

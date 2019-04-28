@@ -1,8 +1,41 @@
 // Place all the styles related to the HomePage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background-image: "http://shop.raybrandthyundai.com/wp-content/uploads/sites/5/2017/03/iStock-517488868-e1490795015639.jpg";
+}
+
+.background {
+  background: url("https://dineindineout.com.au/wp-content/uploads/2018/07/dine-in-dine-out-wood-background-1.jpg");
+  border: 2px solid black;
+  background-size:cover;
+}
+
+.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 2px solid black;
+  opacity: 0.7;
+  }
+
+.transbox p {
+  margin: 2%;
+  font-size: 28px;
+  text-align: left;
+  font-weight: bold;
+  color: #000000;
+}
+
+
 
 h1{
-  font-size: 32px;
-  color:blue 
+  font-size: 46px;
+  text-align: center;
+  font-family: calibri;
+
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+
 }
