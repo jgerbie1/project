@@ -12,17 +12,7 @@
     <p><%= @recipe.instruction %></p>
 </div> 
 <h2>Comments</h2>
-<% @recipe.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.username %>
-  </p>
- 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
+ <%= render @recipe.comments %>
 <h2>Add a comment:</h2>
 <%= form_for([@recipe, @recipe.comments.build]) do |f| %>
   <p>
