@@ -2,18 +2,21 @@
     <h1 id=heading>Recipe Finder</h1>
     <p>
         <%=link_to 'Create Recipe', new_recipe_path %>
+        <%=link_to 'Home', controller: 'home_page' %>
     </p>
 </div>
-<div class="body_container">
+<% Recipe.all.each do |recipe| %>
+<%= link_to image_tag recipe.images, :size => "300x260" %>
+<ul>
+<li>
+<div class="body_container" >
     <table>
-        <tr>
             <th>Title:</th>
             <th>Description:</th>
             <th>Instruction:</th>
             <th>Ingredients:</th>
         </tr>
         
-        <% Recipe.all.each do |recipe| %>
         <tr>
             <td><%= recipe.title %></td>
             <td><%= recipe.description %></td>
@@ -26,6 +29,9 @@
                              method: :delete,
                              data: { confirm: 'Are you sure?' } %></td>
         </tr>
+        </tr>
     </table>
+</li>
+</ul>
     <% end %>
 </div>

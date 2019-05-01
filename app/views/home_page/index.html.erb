@@ -1,19 +1,22 @@
-<h1>Hello, Chef!</h1>
+<h1>  </h1>
 
 <body>
 <div class="background">
-    <h1 id=heading>Recipe Finder</h1>
+    <h1 id=heading>Hello, Chef</h1>
   </div>
 
     <div class="transbox">
          <p>
             <%=link_to 'Create Recipe', new_recipe_path %>
+             <%=link_to 'Recipes', controller: 'recipes' %>
         </p>
         <table>
             
             <tr>
                 <th>Title:</th><br>
                 <th>Description:</th>
+                <th>Instruction:</th>
+                <th>Ingredients:</th>
             </tr>
             
             <% Recipe.all.each do |recipe| %>
