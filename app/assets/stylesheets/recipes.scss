@@ -7,9 +7,11 @@ input[type=text]{
     padding: 12px 12px;
     border: 2px solid #ccc;
     background-color: #f8f8f8;
+    margin-left: 310px;
     resize: none;
 }
 textarea{
+   margin-left: 250px;
     width: 60%;
     height: 200px;
     padding: 12px 12px;
@@ -35,8 +37,9 @@ input[type=button], input[type=submit]{
   max-width: 300px;
   margin: left;
   text-align: center;
-  background: rgba(0, 0, 0.1, 0.1);
+  background: rgba(0, .1, 0.6, .01);
 }
+
 h2{
   margin-top: 0px;
   color: black;
@@ -49,10 +52,10 @@ h2{
 }
 .column {
   float: left;
-   width: 25%;
+   width: 23%;
   padding: 0 10px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .column {
     width: 100%;
     display: block;
