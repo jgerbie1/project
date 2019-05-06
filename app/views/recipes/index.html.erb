@@ -5,33 +5,25 @@
         <%=link_to 'Home', controller: 'home_page' %>
     </p>
 </div>
-<% Recipe.all.each do |recipe| %>
-<%= link_to image_tag recipe.images, :size => "300x260" %>
-<ul>
-<li>
-<div class="body_container" >
-    <table>
-            <th>Title:</th>
-            <th>Description:</th>
-            <th>Instruction:</th>
-            <th>Ingredients:</th>
-        </tr>
-        
-        <tr>
-            <td><%= recipe.title %></td>
-            <td><%= recipe.description %></td>
-            <td><%= recipe.instruction %></td>
-            <td><%= recipe.ingredients %></td>
-            <td><%= link_to 'Show', recipe_path(recipe) %></td> <br>
-            <td><%= link_to 'Edit',  edit_recipe_path(recipe) %></td>
-            <td><%= link_to 'Destroy',
+    <% Recipe.all.each do |recipe| %>
+    <div class= "row">
+     <div class="column"> 
+     <div class="card">
+    <%= link_to image_tag recipe.images, :size => "300x260" %>
+    <h2><%= recipe.title %></h2>
+    <p>
+    <%= recipe.description %>    
+    </p>
+    <p>
+    <%= link_to 'Show Recipe', recipe_path(recipe) %>
+    </p>
+    <p> <%= link_to 'Edit Recipe',  edit_recipe_path(recipe) %>  
+                        <%= link_to 'Destroy',
                              recipe_path(recipe),
                              method: :delete,
-                             data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        </tr>
-    </table>
-</li>
-</ul>
+                             data: { confirm: 'Are you sure?' } %></p>
+</div>
+</div>
     <% end %>
+
 </div>
