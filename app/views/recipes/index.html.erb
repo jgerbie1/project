@@ -1,8 +1,8 @@
 <div class="header_container">
     <h1 id=heading>Recipe Finder</h1>
     <p>
-        <%=link_to 'Create Recipe', new_recipe_path %>
         <%=link_to 'Home', controller: 'home_page' %>
+        <%=link_to 'Create Recipe', new_recipe_path %>
     </p>
 </div>
     <% Recipe.all.each do |recipe| %>
@@ -18,7 +18,7 @@
     <%= link_to 'Show Recipe', recipe_path(recipe) %>
     </p>
     <p> <%= link_to 'Edit Recipe',  edit_recipe_path(recipe) %>  
-                        <%= link_to 'Destroy',
+                        <%= link_to 'Report',
                              recipe_path(recipe),
                              method: :delete,
                              data: { confirm: 'Are you sure?' } %></p>

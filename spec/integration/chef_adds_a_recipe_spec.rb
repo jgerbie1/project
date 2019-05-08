@@ -21,4 +21,12 @@ feature"Chef adds a recipe" do
         fill_in "Ingredients", with: "This is a new Capybara Ingredients"
         click_button "Create Recipe"
     end
+    # scenario "Chef successfully edits a recipe" do
+    #     visit edit_recipe_path(recipe)
+    #     expect(page).to have_content "Editing recipes"
+    #     fill_in "description", with: "I really love this recipe."
+    #     click_button "Update Recipe"
+    #     expect(page).to have_content("description edited for testing")
+    #     expect(page).not_to have_content("Create Comment")
+    # end
 end

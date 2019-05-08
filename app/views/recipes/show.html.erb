@@ -1,7 +1,6 @@
 
 <div>
     <h1><strong> <%= @recipe.title %></strong> </h1>
-    
     <h2>Description:</h2>
     <p><%= @recipe.description %></p>
     
@@ -16,5 +15,6 @@
  <%= render @recipe.comments %>
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
-
+<h4>
 <%= link_to 'Back', recipes_path %> 
+</h4>
